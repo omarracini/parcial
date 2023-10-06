@@ -22,6 +22,7 @@ class _PaginaSueldoState extends State<PaginaSueldo> {
           children: <Widget>[
            TextField(
   controller: nombreController,
+  // ignore: prefer_const_constructors
   decoration: InputDecoration(
     labelText: 'Nombre Empleado',
     hintText: 'Por favor, introduce el nombre del empleado aquí',

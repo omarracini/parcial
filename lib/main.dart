@@ -13,31 +13,41 @@ class RutaPrincipal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 125, 15, 28), 
       appBar: AppBar(
         title: Text('Ruta Principal'),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Stack(
+          alignment: Alignment.center,
           children: <Widget>[
-            ElevatedButton(
-              child: Text('Calculadora IMC'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => PaginaIMC()),
-                );
-              },
-            ),
-            SizedBox(height: 20),  // Agrega un espacio vertical de 20 píxeles
-            ElevatedButton(
-              child: Text('Calculadora de Sueldo'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => PaginaSueldo()),
-                );
-              },
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Image.asset('lib/assets/deadpool.png'),  // Asegúrate de reemplazar 'deadpool-profile.png' con el nombre real de tu archivo de imagen
+                SizedBox(height: 20),  // Agrega un espacio vertical de 20 píxeles
+                ElevatedButton(
+                  style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.black)),  // Cambia el color del botón a negro
+                  child: Text('Calculadora IMC', style: TextStyle(color: Colors.white)),  // Cambia el color del texto a blanco para mejor visibilidad
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PaginaIMC()),
+                    );
+                  },
+                ),
+                SizedBox(height: 20),  // Agrega un espacio vertical de 20 píxeles
+                ElevatedButton(
+                  style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.black)),  // Cambia el color del botón a negro
+                  child: Text('Calculadora de Sueldo', style: TextStyle(color: Colors.white)),  // Cambia el color del texto a blanco para mejor visibilidad
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PaginaSueldo()),
+                    );
+                  },
+                ),
+              ],
             ),
           ],
         ),
