@@ -79,6 +79,7 @@ class _PaginaSueldoState extends State<PaginaSueldo> {
             const SizedBox(height: 20),  
             Image.asset('lib/assets/cyclops.png'),
           ],
+          
         ),
       ),
     );
