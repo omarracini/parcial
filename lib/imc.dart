@@ -12,6 +12,7 @@ class _PaginaIMCState extends State<PaginaIMC> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 254, 211, 61),  
       appBar: AppBar(
         title: const Text('Calculadora IMC'),
       ),
@@ -36,6 +37,7 @@ class _PaginaIMCState extends State<PaginaIMC> {
               keyboardType: TextInputType.number,
             ),
             ElevatedButton(
+              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.black)),
               child: const Text('Calcular'),
               onPressed: () {
                 // Primero, obtén los valores ingresados por el usuario.
@@ -51,6 +53,7 @@ class _PaginaIMCState extends State<PaginaIMC> {
                       content: Text('Tu IMC es ${imc.toStringAsFixed(2)}'),
                       actions: <Widget>[
                         TextButton(
+                          style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.black)),
                           child: const Text('Cerrar'),
                           onPressed: () {
                             Navigator.of(context).pop();
@@ -62,6 +65,8 @@ class _PaginaIMCState extends State<PaginaIMC> {
                 );
               },
             ),
+            const SizedBox(height: 20),  
+            Image.asset('lib/assets/wolverine.png'),  
           ],
         ),
       ),

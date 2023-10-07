@@ -90,3 +90,5 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
     - lib/assets/deadpool.png
+    - lib/assets/wolverine.png
+    - lib/assets/cyclops.png
